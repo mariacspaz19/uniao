@@ -1,6 +1,129 @@
 <fable>
-	<page>
   
+	<page background="bg1.png">
+    <agent text="Bem vindo a escola!" x="20" y="450" font-size="30"/>
+    <agent text="Hoje é primeiro dia de aula de Carlos." x="20" y="400" width="300" font-size="18" on-touch="story2">
+      
+      <story2 text="Ajude Carlos a encontrar a sala..." on-touch="story3"/>
+      <story3 text="Clique na seta para continuar"/>
+    </agent>
+      
+    <agent img="escola.png" x="0" y="-50" width="500" height="350" />
+    
+    <agent img="estudante.png" x="200" y="40" width="90" height="100" />
+    <agent img="seta.png" x="450" y="0" width="50" height="50" on-touch="_NEXT_PAGE" />
+  </page>
+  
+  <page background="bg2.jpg">
+  	<agent text="Agora ele precisa descobrir qual é a sua sala de aula. Para isso ele irá pedir informação em alguma outra sala." x="20" y="370" width="300" font-size="20"/>
+    
+  	<agent img="estudante.png" x="170" y="40" width="150" height="200" />
+    <agent img="seta.png" x="450" y="0" width="50" height="50" on-touch="_NEXT_PAGE" />
+  </page>
+  
+	<page background="bg4.jpg">
+  	<agent text="Carlos entrou na sala errada e ficou trancado. Agora ele deve achar a chave para abrir a porta." x="20" y="380" width="300" font-size="20"/>
+    
+    <agent img="livros.png" x="0" y="-40" width="280" height="350"/>
+    <agent img="porta.png" x="250" y="-50" width="280" height="350" drop-zone="open-door">
+    	<open-door img="portaaberta.png" on-touch="_NEXT_PAGE"/>
+    </agent>
+    <agent img="chave.png" x="50" y="300" width="40" height="30" draggable="true" on-drop="open-door" on-zone="disappear" on-trigger="disappear">
+    	<disappear x="-500"/>
+    </agent>
     
   </page>
+  
+  <page background="bg2.jpg">
+  	<agent text="Após sair da sala de livros, Carlos segue sua busca." x="20" y="400" width="300" font-size="20"/>
+    
+  		<agent img="estudante.png" x="170" y="40" width="150" height="200" />
+    	<agent img="seta.png" x="450" y="0" width="50" height="50" on-touch="_NEXT_PAGE" />
+  </page>
+  
+  <page background="bg3.jpg">
+  	<agent text="Carlos então entrou na sala 2" x="20" y="400" width="300" font-size="20"/>
+  		<agent text="A sala do Prof. Rafael Procópio." x="150" y="250" width="240" on-touch="story1" font-size="12">
+        <story1 text="O professor de matemática mais temido de todos." x="150" y="250" width="200" on-touch="story2"/>
+        <story2 text="Rafael disse que só iria liberá-lo se ele respondesse aum desafio." x="150" y="250" width="200" on-touch="story3"/>
+        <story3 text="Qual a raiz quadrada de 625?" x="150" y="250" width="200"/>
+    </agent>
+    <agent img="botão15.png" x="70" y="-40" width="200" height="150" on-touch="_NEXT_PAGE"/>
+    <agent img="botão25.png" x="-50" y="-40" width="200" height="150" on-touch="_GOTO_PAGE: 13"/>
+    <agent img="professor3.png" x="250" y="-40" width="280" height="350" />
+  </page>
+  
+  <page background="bg2.jpg">
+  	<agent text="Após descobrir que a sala que ele entrou não era a certa e errar a questão, Carlos segue sua busca." x="20" y="400" width="300" font-size="20"/>
+    
+  		<agent img="estudante.png" x="170" y="40" width="150" height="200" />
+    	<agent img="seta.png" x="450" y="0" width="50" height="50" on-touch="_NEXT_PAGE" />
+  </page>
+  
+  <page background="saladeaula3.jpg">
+    <agent img="professor1.png" x="0" y="60" width="240" height="370" />
+    <agent text="Este é o professor Fernando, ele dá aulas de biologia neste colégio." x="123" y="110" width="250" height="350" font-size="20" on-touch="story2" >
+    	<story2 text="Carlos pede ajuda ao professor, mas ele propõe um desafio ao novato em troca da informação. Caso Carlos acerte, ele irá para o laboratório." x="123" y="110" width="250" height="350" font-size="20"/>
+    </agent>	
+    <agent text="Clique na seta para acessar o desafio" x="160" y="0" width="300" height="30" font-size="15"/>
+    <agent img="seta.png" x="450" y="0" width="50" height="50" on-touch="_NEXT_PAGE" />
+    
+  </page>
+    
+  <page background="quadroNegro2.png" >
+  <agent text="Qual alternativa apresenta uma relação ecológica harmônica?" x="30" y="170" width="500" height="220" font-size="20"/>
+  <agent img="inquinilismo.png"  x="110" y="200" width="250" height="150" on-touch="_GOTO_PAGE: 13"/>
+  <agent img="canibalismo.png"  x="110" y="130" width="250" height="150" on-touch="_NEXT_PAGE"/>
+  <agent img="predatismo.png"  x="110" y="60" width="250" height="150" on-touch="_NEXT_PAGE"/>
+  
+  </page>
+  
+  <page background="bg2.jpg">
+  	<agent text="Após descobrir que a sala que ele entrou não era a certa e errar a questão, Carlos segue sua busca." x="20" y="400" width="300" font-size="20"/>
+    
+  		<agent img="estudante.png" x="170" y="40" width="150" height="200" />
+    	<agent img="seta.png" x="450" y="0" width="50" height="50" on-touch="_NEXT_PAGE" />
+  </page>
+
+  <page background="bg3.jpg">
+  	<agent text="Carlos então entrou na sala 3" x="20" y="400" width="300" font-size="20"/>
+  		<agent text="A sala do Profa. Judith Lemos" x="150" y="250" width="240" on-touch="story1" font-size="12">
+        <story1 text="A professora de geografia com a prova mais difícil" x="150" y="250" width="200" on-touch="story2"/>
+        <story2 text="Judith disse que só iria liberá-lo se ele respondesse uma questão" x="150" y="250" width="200" on-touch="story3"/>
+        <story3 text="Qual desses países NÃO faz fronteira com a França?" x="150" y="250" width="200"/>
+    </agent>
+    <agent img="botaoSuica.png" x="70" y="-40" width="200" height="150" on-touch="_NEXT_PAGE"/>
+    <agent img="botaoPortugal.png" x="-50" y="-40" width="200" height="150" on-touch="_GOTO_PAGE: 13"/>
+    <agent img="professora1.png" x="250" y="-40" width="280" height="350" />
+  </page>
+  
+  <page background="bg2.jpg">
+  	<agent text="Após descobrir que a sala que ele entrou não era a certa e errar a questão, Carlos segue sua busca." x="20" y="400" width="300" font-size="20"/>
+    
+  		<agent img="estudante.png" x="170" y="40" width="150" height="200" />
+    	<agent img="seta.png" x="450" y="0" width="50" height="50" on-touch="_NEXT_PAGE" />
+  </page>
+  
+  <page background="saladeaula3.jpg">
+    <agent img="professor2.png" x="0" y="60" width="240" height="370" />
+    <agent text="Esta é o professor Joan, ele dá aulas de física neste colégio." x="123" y="110" width="250" height="350" font-size="20" on-touch="story2" >
+    	<story2 text="Carlos pede ajuda para o professor e ela lhe dá a informação necessária." x="123" y="110" width="200" height="350" font-size="18"/>
+    </agent>	
+    <agent text="Clique na seta para ir até o laboratório de química" x="70" y="-315" width="500" height="350" font-size="15"/>
+    <agent img="seta.png" x="450" y="0" width="50" height="50" on-touch="_NEXT_PAGE" />
+    
+  </page>
+  
+  <page background="bg2.jpg">
+  	<agent text="Após descobrir o local do laboratório de química, Carlos foi até ele." x="20" y="400" width="300" font-size="20"/>
+    
+  		<agent img="estudante.png" x="170" y="40" width="150" height="200" />
+    	<agent img="seta.png" x="450" y="0" width="50" height="50" on-touch="_NEXT_PAGE" />
+  </page>
+  
+  <page background="professora2.png">
+    <agent text="Carlos finalmente chegou ao laboratório de química onde a professora o aguardava." x="20" y="420" width="300" font-size="20"/>
+    <agent img="quimica.png" x="110" y="200" width="250" height="200"  />
+  </page>
+  
 </fable>
