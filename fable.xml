@@ -48,8 +48,8 @@
         <story2 text="Rafael disse que só iria liberá-lo se ele respondesse aum desafio." x="150" y="250" width="200" on-touch="story3"/>
         <story3 text="Qual a raiz quadrada de 625?" x="150" y="250" width="200"/>
     </agent>
-    <agent img="botão15.png" x="70" y="-40" width="200" height="150" on-touch="_NEXT_PAGE"/>
-    <agent img="botão25.png" x="-50" y="-40" width="200" height="150" on-touch="_GOTO_PAGE: 13"/>
+    <agent img="botao15.png" x="70" y="-40" width="200" height="150" on-touch="_NEXT_PAGE"/>
+    <agent img="botao25.png" x="-50" y="-40" width="200" height="150" on-touch="_GOTO_PAGE: 13"/>
     <agent img="professor3.png" x="250" y="-40" width="280" height="350" />
   </page>
   
